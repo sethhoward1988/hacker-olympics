@@ -1,0 +1,391 @@
+
+body{
+    color:#0a131c;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-image: url('../images/binary.jpg');
+    background-size: cover;
+    background-attachment:fixed;
+    font:12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.content{
+    display: inline-block;
+    padding:30px;
+    opacity:.9;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    width:870px;
+    margin:0 auto;
+    border-radius: 10px;
+}
+
+#result_page.content{
+    opacity:1;
+    background-color:rgb(230,230,230);
+    
+}
+
+.pane{
+    width:840px;
+    margin:0 auto;
+    margin-top:20px;
+}
+
+p{
+    margin-left:20px;
+}
+
+.left{
+    margin-left:30px;
+}
+
+.code{
+    font-family: "Lucida Console";
+    font-size:10pt;
+}
+
+.example{
+    margin-left:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+ol,ul{
+    margin-left: 20px;
+}
+
+.navigation{
+    text-align: center;
+    margin:0 auto;
+}
+
+.navigation span{
+    margin-right:30px;
+}
+
+.navigation span.noMargin{
+    margin-right:0px;
+}
+
+.navigation span a{
+    text-decoration: none;
+    color:#0A131C;
+}
+
+.navigation span a:hover{
+    color:#2d475e;
+    cursor:pointer;
+}
+
+h1{
+    padding:15px;
+    -webkit-transition: all 1s;
+    -moz-transition:  all 1s;
+    -o-transition: all 1s;
+    border-radius:10px;
+    color:#1a2d3e;
+}
+
+h1.active{
+    -webkit-transition: all 1s;
+    -moz-transition:  all 1s;
+    -o-transition: all 1s;
+    color:white;
+    background-color:#1a2d3e
+}
+
+.header{
+    font-size:24pt;
+    color:#1a2d3e;
+    text-align: center;
+    margin-top:30px;
+}
+
+.center{
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.about.pane p{
+    text-align: center;
+}
+
+.final{
+    margin-top:35px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.begin{
+    font-weight: bolder;
+}
+.footer{
+    margin-top:20px;
+    margin-left:-50px;
+    vertical-align: top;
+    width:100px;
+    display: inline-block;
+}
+
+.footer div{
+    float:right;
+}
+
+#button{
+    margin-top:4px;
+}
+
+#___plusone_0{
+    margin-left:37px!important;
+}
+
+.db-wrapper{
+    margin-left:11px;
+    margin-bottom:2px;
+}
+
+.main{
+    width:1040px;
+    margin:0 auto;
+}
+
+.codeCenter{
+    text-align: center;
+}
+
+#solutions .about p{
+    text-align: left;
+}
+
+.solution{
+    text-align:center;
+    font-size:14pt;
+}
+
+.solution ul li{
+    margin-left:250px;
+    text-align: left;
+    list-style: none;
+    font-size: 12pt;
+    line-height: 20px;
+}
+
+.codeview{
+    margin: 0 auto;
+}
+
+.active_link{
+    color:white;
+    background-color:#1a2d3e;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius: 3px;
+}
+
+.active_link:hover{
+    color:white!important;
+}
+
+.winner{
+    text-align: center;
+    vertical-align: top;
+    width:275px;
+    display: inline-block;
+}
+
+.winner .image{
+    border-radius:10px;
+    opacity: 1;
+    margin: 0 auto;
+    width:200px;
+    height:200px;
+    background-position: center center;
+    background-size: cover;
+    padding:5px;
+}
+
+.winner .image:hover{
+    cursor: pointer;
+    padding:0px;
+    border:5px dashed white;
+}
+
+.personal_info{
+    margin-top:15px;
+    line-height: 20px;
+}
+
+.winner_header{
+    font-size:18pt;
+    margin-top:30px;
+    border-radius: 5px;
+    background-color: #1a2d3e;
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    width:235px;
+    margin-left:10px;
+}
+
+#top_code .codeview{
+    display: none;
+}
+
+#honorable_code .codeview{
+    display:none;
+}
+
+.university{
+    font-size:12pt;
+}
+
+.honorable table td{
+    width:135px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.honorable_person{
+    vertical-align: top;
+}
+
+.honorable_person .image{
+    border-radius:5px;
+    margin: 0 auto;
+    width:100px;
+    height:100px;
+    background-position: center center;
+    background-size: cover;
+    padding:3px;
+}
+
+.honorable_person .image:hover{
+    cursor: pointer;
+    padding:0px;
+    border:3px dashed white;
+}
+
+.honorable .header{
+    margin-top:55px;
+    margin-bottom:30px;
+}
+
+.honorable table thead th{
+    font-size:12pt;
+}
+
+.stats{
+    text-align: center;
+}
+
+.stats .image{
+    border-radius:5px;
+    margin: 0 auto;
+    width:75px;
+    height:75px;
+    background-position: center center;
+    background-size: cover;
+    padding:3px;
+}
+
+.stats .image:hover{
+    cursor: pointer;
+    padding:0px;
+    border:3px dashed white;
+}
+
+.code{
+    display:none;
+}
+
+iframe{
+    width:800px;
+}
+
+.codeview{
+    
+}
+
+.stats table{
+    width:850px;
+}
+
+.row_1{
+    width:83px;
+}
+
+.row_2{
+    width:75px;
+}
+
+.row_3{
+    width:75px;
+}
+
+.row_4{
+    width:80px;
+}
+
+.row_5{
+    width:140px;
+}
+
+.row_6{
+    width:175px;
+}
+
+.row_7{
+    width:63px;
+}
+
+.row_8{
+    width:55px;
+}
+
+.row_9{
+    width:83px;
+}
+
+.yes{
+    color:darkgreen;
+
+
+}
+
+.no{
+    color: black;
+}
+
+.honorable thead th{
+    color:white;
+    background-color:#1a2d3e;
+    border-radius:4px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.stats table thead tr{
+    border-radius:4px;
+    color:white;
+    background-color:#1a2d3e;
+}
+
+.stats table thead td{
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:12pt;
+}
+
+.stats table{
+    table-layout: fixed;
+    margin-top:20px;
+    margin-bottom:15px;
+    border-collapse: collapse;
+}

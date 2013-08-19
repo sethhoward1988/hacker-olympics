@@ -1,0 +1,1577 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacker Olympics</title>
+        <meta name="Description" content="Enter to win prizes in this years Hacker Olympics. Simply solve the puzzle in your preferred language and email your submission today!">
+        <meta name="Keywords" content="hackers, olympics, coding, hackathon, python, coding puzzles, puzzle, contest">
+        <meta name="Author" content="Seth Howard">
+        <meta name="CATEGORY" content="home page">
+        <meta name="robots" content="index, follow">
+        <meta name="Reply-to" content="saulpower1@gmail.com">
+        <meta name="Content-Type" content="text/html; charset=iso8859-1">
+        <meta name="resource-type" content="document">
+        <meta name="Copyright" content="2011 Copyright">
+        <meta name="rights" content="Copyright 2012. All material contained herein is owned and protected. Any attempts to reproduce this information without the express written consent from the owner will be prosecuted.">
+        <meta name="googlebot" content="index, follow">
+        <meta name="msnbot" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style/style.css" rel="stylesheet">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/codeview.js" ></script>
+        <script src="js/results.js" ></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33486923-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="footer">
+                <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+                <div class="fb-like" data-href="http://www.hacker-olympics.com" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                </script>
+            </div>
+            <div id="result_page" class="content">
+                <div class="navigation">
+                    <span><a href="/">Home</a></span>
+                    <span><a href="puzzle.html">Puzzle</a></span>
+                    <span><a href="solution.html">Solution</a></span>
+                    <span class="active_link">Results</span>
+                </div>
+                <div class="about pane">
+                    <div class="header">
+                        The Hacker Olympics - 2012 Results
+                    </div>
+                    <div class="center">
+                        <img src="images/hacker_logo.png">
+                    </div>
+                </div>
+                <div class="top_winners pane">
+                    <div class="header">
+                        Top Prize Winners
+                    </div>
+                    <div class="winner">
+                        <div class="winner_header">
+                            Fewest Lines
+                        </div>
+                        <div class="info">
+                            <h2>Razvan Ranca</h2>
+                            <div class="image" person="razvan" style="background-image:url('images/silhouette.jpeg')"></div>
+                            <div class="personal_info">
+                                <span class="university">University of Edinburgh</span><br />
+                                Artificial Intelligence & Computer Science<br />
+                                Lines: 1 with 105 Characters<br />
+                                Language: Python
+                            </div>
+                        </div>
+                    </div>
+                    <div class="winner">
+                        <div class="winner_header">
+                            Fewest Characters
+                        </div>
+                        <div class="info">
+                            <h2>James Sun</h2>
+                            <div class="image" person="james" style="background-image:url('images/james.jpeg')"></div>
+                            <div class="personal_info">
+                                <span class="university">University of Virginia</span><br />
+                                Computer Science<br />
+                                Characters: 100<br />
+                                Language: JavaScript
+                            </div>
+                        </div>
+                    </div>
+                    <div class="winner">
+                        <div class="winner_header">
+                            Fastest Code
+                        </div>
+                        <div class="info">
+                            <h2>Kevin Fiero</h2>
+                            <div class="image" person="kevin" style="background-image:url('images/kevin.jpg')"></div>
+                            <div class="personal_info">
+                                <span class="university">Cornell University</span><br />
+                                <span style="font-size:8pt">Operations Research & Information Engineering</span><br />
+                                Clock Speed: 0.5596 ms<br />
+                                Language: Java
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="top_code">
+<pre class="codeview javascript lineNumbers kevin" style="width:800px; height:175px;">
+int[] g=new int[500];
+String p = "";
+g[1]=1;
+for(int i=2;i<g.length;i++){
+	g[i]=g[i-1]+g[i-2];
+	while(g[i]>26){
+		g[i]=g[i]-26;}
+	if((g[i]==1 || g[i]==5 || g[i]==9 || g[i]==15 || g[i]==21) && i%2==0){
+		char d = (char)(g[i]+96);
+		p=p+d;}}
+System.out.println(p);
+</pre>
+<pre class="codeview javascript lineNumbers james" style="width:800px; height:175px;">
+for(x=n=c='',y=1;n<248||console.log(c);++n)
+    c+={1:'a',5:'e',15:'o',21:'u'}[x=(x+(y=(y+x)%26))%26]||''​
+</pre>
+<pre class="codeview javascript lineNumbers razvan" style="width:800px; height:175px;">
+print filter(lambda x:x in"aeiou",reduce(lambda (l,r,s),n:(l+chr(s%26+96),s+r+r,s+r),range(250),('',1,0))[0])
+</pre>
+                </div>
+                <div class="honorable pane">
+                    <div class="header">
+                        Honorable Mentions
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    PHP
+                                </th>
+                                <th>
+                                    Python
+                                </th>
+                                <th>
+                                    Java
+                                </th>
+                                <th>
+                                    JavaScript
+                                </th>
+                                <th>
+                                    C
+                                </th>
+                                <th>
+                                    C#
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3>Nathan Tate</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="nathan" style="background-image:url('images/nathan.jpg')"></div>
+                                        <br />
+                                        BYU, Utah<br />
+                                        MISM<br />
+                                        Only Correct PHP Entry
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Joe Redmon</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="joe" style="background-image:url('images/joe.jpg')"></div>
+                                        <br />
+                                        Middlebury College<br />
+                                        Computer Science<br />
+                                        Characters: 104
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Darrick Mowrey</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="darrick" style="background-image:url('images/darrick.jpg')"></div>
+                                        <br />
+                                        Carnegie Mellon<br />
+                                        MISM<br />
+                                        Characters: 220
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Benoit Baliguet</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="benoit" style="background-image:url('images/benoit.jpg')"></div>
+                                        <br />
+                                        École Natl. Supérieure<br />
+                                        Software Engineering<br />
+                                        Clock Speed: 3.333 ms
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Prathamesh</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="prathamesh" style="background-image:url('images/prathamesh.jpg')"></div>
+                                        <br />
+                                        Pune Institute of Computer Technology<br />
+                                        Characters: 226
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Garrett Breen</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="garrett" style="background-image:url('images/garrett.jpeg')"></div>
+                                        <br />
+                                        BYU, Utah<br />
+                                        MISM<br />
+                                        Only Correct C# Entry
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <h3>Saul Howard</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="saul" style="background-image:url('images/saul.jpg')"></div>
+                                        <br />
+                                        BYU, Utah<br />
+                                        MISM<br />
+                                        Clock Speed:1.079 ms
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Michael Di Nunzio</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="michael" style="background-image:url('images/michaeldi.jpg')"></div>
+                                        <br />
+                                        Duke University<br />
+                                        Computer Science<br />
+                                        Lines: 7
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>James Sun</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="james" style="background-image:url('images/james.jpeg')"></div>
+                                        <br />
+                                        University of Virginia<br />
+                                        Computer Science<br />
+                                        Lines: 2<br />
+                                    </div>
+                                </td>
+                                <td>
+                                    <h3>Puneet Ravuri</h3>
+                                    <div class="honorable_person">
+                                        <div class="image" person="puneet" style="background-image:url('images/puneet.jpeg')"></div>
+                                        <br />
+                                        Carnegie Mellon<br />
+                                        MISM<br />
+                                        Lines: 15
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br /><br />
+                <div id="honorable_code">
+<pre class="codeview javascript lineNumbers joe" style="width:800px; height:100px;">
+a=[0,1]
+i=0
+exec"a+=[(a[i]+a[i+1])%26];i+=1;"*498
+print"".join([chr(96+i)for i in a[::2]if chr(96+i)in"aeiou"])
+</pre>
+<pre class="codeview javascript lineNumbers darrick" style="width:800px; height:150px;">
+BigInteger A= new BigInteger("0");
+BigInteger B= new BigInteger("1");
+for(int i=0;i<250;i++){
+    System.out.print(Character.toString((char)(A.mod(new BigInteger("26")).intValue()+96)).replaceAll("[^aeiou]", ""));
+    A=A.add(B);
+    B=A.add(B);};
+</pre>
+<pre class="codeview javascript lineNumbers benoit" style="width:800px; height:150px;">
+a=0,b=1,i=0,m={1:"A",5:"E",9:"I",15:"O",21:"U"},f=[]
+for(;i++<500;){
+c=(a+b)%26
+a=b
+b=c
+m[c]&&i%2&&f.push(m[c])
+}
+console.log(f.join(""))
+</pre>
+<pre class="codeview javascript lineNumbers prathamesh" style="width:800px; height:200px;">
+#include <stdio.h>
+
+int main()
+{
+	int i = 0, j = 1, l, sum, temp;
+	for (l = 0; l < 498; l++)
+	{
+		sum = i + j;
+		if (sum > 25)
+			sum = sum % 26;
+		i = j;
+		j = sum;
+		
+		if (l % 2 == 0)
+		{		
+			if (sum != 0)
+				temp = sum + 96;			
+			else
+				temp = sum + 112;
+			if ( ((temp == 97) || (temp == 101) || (temp == 105) || (temp == 111) || (temp == 117)) )
+				printf("%c", temp);			
+		}
+	}
+	return 0;
+}
+</pre>
+<pre class="codeview javascript lineNumbers nathan" style="width:800px; height:150px;">
+function a($b = true, $c = 0, $d = 0, $e = 1) {
+	return ($c < 500 ? (($b && in_array($f = chr($d + 96), ['a','e','i','o','u'])? $f : "") . (a(!$b, $c + 1, $e, ($d + $e) % 26))) : "");
+}
+echo a();
+</pre>                  
+<pre class="codeview javascript lineNumbers garrett" style="width:800px; height:150px;">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Numerics;
+namespace HackerOlympics{
+    class Program{
+        static void Main(string[] args){
+            StringBuilder b = new StringBuilder();
+            for (BigInteger i = 2, f = 0, s = 1, t; i < 500; i++){
+                s = (t = f) + (f = s);
+                b = (i % 2 == 0 && (s%26 == 1 || s%26 == 5 || s%26 == 9 || s%26 == 15 || s%26 == 21)) ? b.Append(((char)((s%26)+96))) : b;}
+            Console.WriteLine(b.ToString());
+            Console.Read();}}}
+</pre>                
+<pre class="codeview javascript lineNumbers saul" style="width:800px; height:150px;">
+a=0;z=[0,1];n=""
+for i in range(500):
+    c=chr(a%26+64)
+    if i%2==0and-1==("AEIOU").find(c):
+        n+=c.replace('@','Z')
+    z=[z[1],a];a=sum(z)
+print(n)
+</pre>
+<pre class="codeview javascript lineNumbers michael" style="width:800px; height:150px;">
+public static String answer="";
+public static void main(String[] args){
+    fib(new BigInteger("0"),new BigInteger("1"),0);
+    System.out.println(answer);
+}
+public static void fib(BigInteger x,BigInteger y,int z){
+    if(z%2==0&&(x.mod(new BigInteger("26")).compareTo(new BigInteger("1"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("5"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("9"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("15"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("21"))==0))answer+=(char)x.mod(new BigInteger("26")).add(new BigInteger("96")).intValue();
+    if(z<500) fib(y,x.add(y),z+1);
+}
+</pre>
+<pre class="codeview javascript lineNumbers james" style="width:800px; height:150px;">
+for(x=n=c='',y=1;n<248||console.log(c);++n)
+    c+={1:'a',5:'e',15:'o',21:'u'}[x=(x+(y=(y+x)%26))%26]||''​
+</pre>
+<pre class="codeview javascript lineNumbers puneet" style="width:800px; height:200px;">
+#include<stdio.h>
+
+void main()
+{
+int i, j=0;
+int f[500];
+char c[250], g[250];
+f[0] = 0;
+f[1] = 1;
+c[0] = 122;
+for (i=2; i<500; i++) {
+  f[i] = f[i-1]%26 + f[i-2]%26;
+  if(i%2==0) {
+    c[i/2] = (f[i]-1)%26 + 97;
+    if(c[i/2] == 'a' || c[i/2] == 'e' || c[i/2] == 'i' || c[i/2] == 'o' || c[i/2] == 'u') {
+      g[j] = c[i/2];
+      j++;
+    }
+  }
+}
+g[j] = '\0';
+printf("%s\n", g);
+}
+</pre>                    
+                </div>
+                <div class="stats pane">
+                    <div class="header">
+                        All Submissions
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="row_1"></td>
+                                <td class="row_2">Name</td>
+                                <td class="row_3">Flavor</td>
+                                <td class="row_4">Correct</td>
+                                <td class="row_5">School</td>
+                                <td class="row_6">Major</td>
+                                <td class="row_7">Lines</td>
+                                <td class="row_8">Chars</td>
+                                <td class="row_9">Time(ms)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/veda.jpg')"></div></td>
+                                <td>Veda</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Carnegie Mellon University</td>
+                                <td>Information Systems, CS Minor</td>
+                                <td>6</td>
+                                <td>182</td>
+                                <td>3.657</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+a,b = [0,1]*250,[]   
+    for i in xrange(2,500): a[i] = a[i-1]+a[i-2]    
+    for j in xrange(0,500,2):       
+        cI = a[j]%26 if (a[j]%26) else 26       
+        if (not (cI-1) * (cI-5) * (cI-9) * (cI-15) * (cI-21)): b.append(chr(96+cI)) 
+        print''.join(b)
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/john.jpg')"></div></td>
+                                <td>John</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Utah Valley University </td>
+                                <td>Computer Science</td>
+                                <td>5</td>
+                                <td>307</td>
+                                <td>2.771</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+def recursive_call(num1, num2, base, letter_map, nth, letters):
+    letters += letter_map[(num1 + num2) % 26] if ((num1 + num2) % 26) in letter_map.keys() and nth % 2 else ''
+    recursive_call(num2, num1 + num2, base, letter_map, nth + 1, letters) if nth != base else None
+    print letters,sys.exit()
+recursive_call(0, 1, 501, {1:'A',5:'E',9:'I',15:'O',21:'U'}, 3, '')
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/brandon.jpg')"></div></td>
+                                <td>Brandon</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Carnegie Mellon</td>
+                                <td>Computer Science</td>
+                                <td>3</td>
+                                <td>159</td>
+                                <td>1.9276</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+a,b,f,v=0,1,[],[1,5,9,15,21]
+for x in range(500):a,b,f=b,a+b,f+[a]
+print "".join([m,'z'][m=='`'] for m in [chr(96+f[x]%26) for x in range(500) if (x%2==0 and v.count(f[x]%26))])
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/seth.jpeg')"></div></td>
+                                <td>Seth</td>
+                                <td>JavaScript</td>
+                                <td class="yes">Yes</td>
+                                <td>BYU, Utah</td>
+                                <td>ISYS</td>
+                                <td>6</td>
+                                <td>256</td>
+                                <td>43.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+var a = BigInteger(0),b = BigInteger(1),f = [a,b],x = [],v = [1,'a',5,'e',9,'i',15,'o',21,'u'];
+for(var i = 1;i < 499; i++){
+    if(i % 2 == 0)
+        v.indexOf(f[i].remainder(26)._d[0]) != -1 && x.push(v[v.indexOf(f[i].remainder(26)._d[0]) + 1])
+    f.push(f[i].add(f[i-1]));
+};
+console.log(x.join(''));
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/darrick.jpg')"></div></td>
+                                <td>Darrick</td>
+                                <td>Java</td>
+                                <td class="yes">Yes</td>
+                                <td>Carnegie Mellon</td>
+                                <td>MISM</td>
+                                <td>7</td>
+                                <td>220</td>
+                                <td>47.2486</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+BigInteger A= new BigInteger("0");
+BigInteger B= new BigInteger("1");
+for(int i=0;i<250;i++){
+    System.out.print(Character.toString((char)(A.mod(new BigInteger("26")).intValue()+96)).replaceAll("[^aeiou]", ""));
+    A=A.add(B);
+    B=A.add(B);};
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/saul.jpg')"></div></td>
+                                <td>Saul</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>BYU, Utah</td>
+                                <td>MISM</td>
+                                <td>7</td>
+                                <td>128</td>
+                                <td>1.0793</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+a=0;z=[0,1];n=""
+for i in range(500):
+    c=chr(a%26+64)
+    if i%2==0and-1==("AEIOU").find(c):
+        n+=c.replace('@','Z')
+    z=[z[1],a];a=sum(z)
+print(n)
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/kevin.jpg')"></div></td>
+                                <td>Kevin</td>
+                                <td>Java</td>
+                                <td class="yes">Yes</td>
+                                <td>Cornell</td>
+                                <td>Ops Research & Info. Engineering</td>
+                                <td>11</td>
+                                <td>224</td>
+                                <td>0.5596</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+int[] g=new int[500];
+String p = "";
+g[1]=1;
+for(int i=2;i<g.length;i++){
+	g[i]=g[i-1]+g[i-2];
+	while(g[i]>26){
+		g[i]=g[i]-26;}
+	if((g[i]==1 || g[i]==5 || g[i]==9 || g[i]==15 || g[i]==21) && i%2==0){
+		char d = (char)(g[i]+96);
+		p=p+d;}}
+System.out.println(p);
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/charles.jpg')"></div></td>
+                                <td>Charles</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Cornell</td>
+                                <td>Computer Science</td>
+                                <td>1</td>
+                                <td>143</td>
+                                <td>37.908</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+print ''.join(filter(lambda x:x in list('aeiou'),map(lambda c:chr(97+(reduce(lambda x,c:[x[1],x[0]+x[1]],range(c),[0,1])[0]-1)%26),range(500)[::2])))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/garrett.jpeg')"></div></td>
+                                <td>Garrett</td>
+                                <td>C#</td>
+                                <td class="yes">Yes</td>
+                                <td>BYU, Utah</td>
+                                <td>MISM</td>
+                                <td>7</td>
+                                <td>233</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Numerics;
+namespace HackerOlympics{
+    class Program{
+        static void Main(string[] args){
+            StringBuilder b = new StringBuilder();
+            for (BigInteger i = 2, f = 0, s = 1, t; i < 500; i++){
+                s = (t = f) + (f = s);
+                b = (i % 2 == 0 && (s%26 == 1 || s%26 == 5 || s%26 == 9 || s%26 == 15 || s%26 == 21)) ? b.Append(((char)((s%26)+96))) : b;}
+            Console.WriteLine(b.ToString());
+            Console.Read();}}}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/jeff.jpg')"></div></td>
+                                <td>Jeff</td>
+                                <td>JavaScript</td>
+                                <td class="no">No</td>
+                                <td>BYU, Utah</td>
+                                <td>MISM</td>
+                                <td>12</td>
+                                <td>393</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+var s = '', f = [], a = ['Z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+for(i=0; i<500; i= i+2){
+	fb(i)>26? f.push(fb(i)%26): f.push(fb(i));
+}
+for(i=0; i<f.length; i++){
+	f[i]==1||f[i]==5||f[i]==9||f[i]==15||f[i]==21||f[i]==25? null : s = s + a[f[i]];
+}
+console.log(s);
+function fb(n){
+    var i, q = new Array(0,1);
+    for(i=0; i<n; i++){
+            q.push(q[0] + q[1]);
+            q.shift();
+}  
+    return q[0];}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/weber.jpg')"></div></td>
+                                <td>Weber</td>
+                                <td>PHP</td>
+                                <td class="no">No</td>
+                                <td>Carnegie Mellon</td>
+                                <td>ISYS & Management</td>
+                                <td>7</td>
+                                <td>186</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+$a = array(0,1);
+for($i=2;$i<500;$i++)
+	$a[] = bcadd($a[$i-1],$a[$i-2]);
+foreach($a as $i=>$x){
+	if($i%2==0)
+		$s.=(bcmod($x,26)==0?chr(97):chr(bcmod($x,26)+96));
+	}
+echo preg_replace('/[^aeiou]/i','',$s);
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/ryan.jpg')"></div></td>
+                                <td>Ryan</td>
+                                <td>Java</td>
+                                <td>Yes</td>
+                                <td>Carnegie Mellon</td>
+                                <td>MS Info Security Policy & Mgmt</td>
+                                <td>28</td>
+                                <td>513</td>
+                                <td>5.4453</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:350px;">
+public static void main(String[] args) {
+        BigInteger[] a = new BigInteger[500];
+        char[] c = new char[250];
+        int j = 0;
+        for(int i=0; i<500; i++){
+                if(i==0)
+                        a[i]=BigInteger.ZERO;
+                else if(i==1)
+                        a[i]=BigInteger.ONE;
+                else
+                        a[i]=(a[i-1].add(a[i-2]));
+        }
+
+        //Convert numbers at even indices to characters
+        //Disregard numbers at odd indices
+        for(int i=0; i<500; i++){
+                if(i%2 == 0){
+                        c[j] = convert(a[i]);
+                        j++;
+                }
+        }
+
+        //Only print the vowels
+        for(int i=0; i<250; i++){
+                if((int)c[i] == 65 || (int)c[i] == 69 || (int)c[i] == 73 || (int)c[i] == 79 || (int)c[i] == 85)
+                        System.out.print(c[i]);
+        }
+}
+
+//Takes in a BigInteger and converts it to a character
+// A=1, B=2, etc.
+static char convert(BigInteger b){
+        int i;
+        BigInteger b2 = new BigInteger("26");
+        if(b.compareTo(b2) == 1)
+                b = b.mod(b2);
+        i = b.intValue();
+        if(i==0)
+                i+=90;
+        else
+                i+=64;	
+        return (char)i;
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/abdallah.jpg')"></div></td>
+                                <td>Abdallah</td>
+                                <td>Java</td>
+                                <td class="yes">Yes</td>
+                                <td>Carnegie Mellon</td>
+                                <td>MISM</td>
+                                <td>12</td>
+                                <td>302</td>
+                                <td>5.124</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+String result = "";
+BigInteger[] fib = new BigInteger[500];
+fib[0] = BigInteger.valueOf(0);
+fib[1] = BigInteger.valueOf(1);
+for (int i = 2; i < 500; i++) {
+        fib[i] = fib[i - 1].add(fib[i - 2]);
+}
+for(int i =0;i<500 ;i++){
+        if(i%2==0){
+            int j = fib[i].mod(new BigInteger("26")).intValue();
+            if(j==1 || j==5 || j==9 || j==15 || j==21){
+                result +=(char)(96+j);}
+        }
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/joe.jpg')"></div></td>
+                                <td>Joe</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Middlebury College</td>
+                                <td>Computer Science</td>
+                                <td>4</td>
+                                <td>104</td>
+                                <td>25.335</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:100px;">
+a=[0,1]
+i=0
+exec"a+=[(a[i]+a[i+1])%26];i+=1;"*498
+print"".join([chr(96+i)for i in a[::2]if chr(96+i)in"aeiou"])
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/sean.jpg')"></div></td>
+                                <td>Sean</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Georgia Tech</td>
+                                <td>Computer Science</td>
+                                <td>1</td>
+                                <td>285</td>
+                                <td>44.4873</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:100px;">
+print ''.join(map(lambda h: {0:'', 1:'A', 2:'', 3:'', 4:'', 5:'E', 6:'', 7:'', 8:'', 9:'I', 10:'', 11:'', 12:'', 13:'', 14:'', 15:'O', 16:'',  17:'', 18:'', 19:'', 20:'', 21:'U', 22:'', 23:'', 24:'', 25:'', 26:''}[h], map(lambda e: (lambda n:reduce(lambda x,n:[x[1],x[0]+x[1]], range(n),[0,1])[0] % 27)(e), range(0, 500, 2))))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/jason.jpg')"></div></td>
+                                <td>Jason</td>
+                                <td>C#</td>
+                                <td class="no">No</td>
+                                <td>Penn State Behrend</td>
+                                <td>Computer Science</td>
+                                <td>14</td>
+                                <td>246</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:250px;">
+using System;
+class P
+{
+    private static readonly char[] cs = new char[] { 'A', 'E', 'I', 'O', 'U' };
+    static void Main(string[] args)
+    {
+        char[] c = new char[59];
+        ulong n1 = 0, n2 = 1;
+        for (int i = 1, j = 0; i < 500; i++)
+        {
+            ulong n = i == 1 ? n = 1 : n = n1 + n2;
+            if (i != 1)
+            {
+                n1 = n2;
+                n2 = n;
+            }
+            if (i % 2 == 0)
+            {
+                int m = n < 27 ? (int)n : (int)(n % 26);
+                m = m == 1 ? 0 : m == 5 ? 1 : m == 9 ? 2 : m == 15 ? 3 : m == 21 ? 4 : 5;
+                if (m != 5)
+                {
+                    c[j] = cs[m];
+                    j++;
+                }
+            }
+        }
+        Console.WriteLine(new string(c));
+    }
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/michaeldi.jpg')"></div></td>
+                                <td>Michael</td>
+                                <td>Java</td>
+                                <td class="yes">Yes</td>
+                                <td>Duke University</td>
+                                <td>Computer Science</td>
+                                <td>7</td>
+                                <td>577</td>
+                                <td>25.9586</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+public static String answer="";
+public static void main(String[] args){
+    fib(new BigInteger("0"),new BigInteger("1"),0);
+    System.out.println(answer);
+}
+public static void fib(BigInteger x,BigInteger y,int z){
+    if(z%2==0&&(x.mod(new BigInteger("26")).compareTo(new BigInteger("1"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("5"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("9"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("15"))==0||x.mod(new BigInteger("26")).compareTo(new BigInteger("21"))==0))answer+=(char)x.mod(new BigInteger("26")).add(new BigInteger("96")).intValue();
+    if(z<500) fib(y,x.add(y),z+1);
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/silhouette.jpeg')"></div></td>
+                                <td>Razvan</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>University of Edinburgh</td>
+                                <td>Artificial Intelligence & CS</td>
+                                <td>1</td>
+                                <td>105</td>
+                                <td>1.7926</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+print filter(lambda x:x in"aeiou",reduce(lambda (l,r,s),n:(l+chr(s%26+96),s+r+r,s+r),range(250),('',1,0))[0])
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/stephen.jpg')"></div></td>
+                                <td>Stephen</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>University of Tulsa</td>
+                                <td>Computer Science</td>
+                                <td>1</td>
+                                <td>227</td>
+                                <td>38.8123</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+print reduce(lambda x,y:str(x)+str(y),((lambda t=chr(ord('a')+((lambda i,y=[0,1]:y[i] if i<2 else [(y.append(y[-1]+y[-2]),y)[1][-1] for j in xrange(i-1)][-1])(n)-1)%26):t if t in set(['a','e','i','o','u']) else '')() for n in xrange(500) if not (n&1)))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/joshua.jpg')"></div></td>
+                                <td>Joshua</td>
+                                <td>Python</td>
+                                <td class="no">No</td>
+                                <td>Lehigh University, Bethlehem PA</td>
+                                <td>Mechanical Engineering</td>
+                                <td>23</td>
+                                <td>393</td>
+                                <td>2.2216</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:250px;">
+def fib():
+    #returns list of first 500 fibonacci values with the odd numbered indexes removed
+    a,b=1,0
+    x=0
+    fib_list=[]
+    while x<500:
+        a,b=b+a,a
+        if x%2==0:
+            fib_list.append(b)
+        x+=1
+    return(fib_list)
+def num_2_let(n):
+    #returns letter corresponding to number, checks to see if vowel, if vowel, returns empty string
+    letters=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    if n in {1,5,9,15,21} or n%26 in {1,5,9,15,21}:
+        if n<=26:
+            return(letters[n-1])
+        else:
+            return(letters[(n%26)-1])
+    else:
+        return('')
+string=''
+for y in fib():
+    string+=num_2_let(y)
+print(string)
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/james.jpeg')"></div></td>
+                                <td>James</td>
+                                <td>JavaScript</td>
+                                <td class="yes">Yes</td>
+                                <td>University of Virginia</td>
+                                <td>Computer Science</td>
+                                <td>2</td>
+                                <td>100</td>
+                                <td>4.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+for(x=n=c='',y=1;n<248||console.log(c);++n)
+    c+={1:'a',5:'e',15:'o',21:'u'}[x=(x+(y=(y+x)%26))%26]||''​
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/gaurav.jpeg')"></div></td>
+                                <td>Gaurav</td>
+                                <td>Java</td>
+                                <td class="no">No</td>
+                                <td>Carnegie Mellon</td>
+                                <td>MISM</td>
+                                <td>15</td>
+                                <td>100</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+public class Fibonacci {
+	static double fibo(int j) {
+		if (j >= 2) {
+			double[] a = new double[j + 1];
+			a[1] = a[2] = 1;
+			for (int i = 3; i <= j; i++)
+				a[i] = a[i - 1] + a[i - 2];
+			return a[j];
+		} else
+			return j;
+	}
+	public static void main(String[] args) {
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < 500; i = i + 2){
+			double result = Fibonacci.fibo(i);
+			sb.append(((char) (result % 26==0?122:((int)(result % 26) + 96))));
+		}
+		System.out.println(sb.toString().replaceAll("[^aeiou]", ""));
+	}
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/nicolas.jpeg')"></div></td>
+                                <td>Nicolas</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Ecole des Mines de Nancy, France</td>
+                                <td>Computer Science</td>
+                                <td>2</td>
+                                <td>153</td>
+                                <td>40.4196</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+f=lambda n,a=0,b=1:a if n<=0 else f(n-1,b,a+b)
+print ''.join(filter(lambda c:c in['A','E','I','O','U'],map(lambda i:chr((i-1)%26+65), [f(i) for i in xrange(0,500,2)])))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/benoit.jpg')"></div></td>
+                                <td>Benoît</td>
+                                <td>JavaScript</td>
+                                <td class="yes">Yes</td>
+                                <td>École Nationale Supérieure des Mines de Nancy</td>
+                                <td>Software Engineering</td>
+                                <td>7</td>
+                                <td>130</td>
+                                <td>3.3333</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+a=0,b=1,i=0,m={1:"A",5:"E",9:"I",15:"O",21:"U"},f=[]
+for(;i++<500;){
+c=(a+b)%26
+a=b
+b=c
+m[c]&&i%2&&f.push(m[c])
+}
+console.log(f.join(""))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/roland.jpg')"></div></td>
+                                <td>Roland</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Babes-Bolyai University, Cluj</td>
+                                <td>Computer Science</td>
+                                <td>3</td>
+                                <td>153</td>
+                                <td>1.1183</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+f = [0,1]
+[f.append(f[-2]+f[-1]) for i in range(500)]
+print( "".join([chr(f[i]%26+(26-f[i]%26)//26*26+96) for i in range(len(f)) if (i%2==0 and f[i]%26 in [1,5,9,15,21])]))
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/michael.jpg')"></div></td>
+                                <td>Michael</td>
+                                <td>Python</td>
+                                <td class="no">No</td>
+                                <td>University of Georgia</td>
+                                <td>Computer Science</td>
+                                <td>4</td>
+                                <td>163</td>
+                                <td>1.4716</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+fibs  = [0, 1]
+[fibs.append(fibs[-2] + fibs[-1]) for i in xrange(500)]
+ascii = [chr(int(x % 26) + 97) for x in fibs[0::2] if chr(int(x % 26) + 97) in ['a', 'e', 'i', 'o', 'u']]
+print("".join(ascii))
+
+Output 'aiooiaaiooiaaiooiaaiooiaaiooiaaiooia'
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/arif.jpg')"></div></td>
+                                <td>Arif</td>
+                                <td>Java</td>
+                                <td class="no">No</td>
+                                <td>Shahjalal University of Science & Technology</td>
+                                <td>CS & Engineering</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+BigInteger a = new BigInteger("0");
+    BigInteger b = new BigInteger("1");
+    BigInteger t = new BigInteger("0");
+    char c;
+    String s = "";
+
+    for(int i=0; i<500; i++) {
+        if(i%2 == 0) {
+            c = (char) ((a.intValue() % 26 == 0) ? 26 : a.intValue() % 26);
+            c += 96;
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+                s += c;
+        }
+        t = b;
+        b = a.add(b);
+        a = t;
+    }
+
+    System.out.println(s);
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/atikur.jpg')"></div></td>
+                                <td>Atikur</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Rajshahi University of Engineering & Technology</td>
+                                <td>Civil Engineering</td>
+                                <td>6</td>
+                                <td>133</td>
+                                <td>1.2783</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+a,b,c,d=0,1,2,[0,1]
+    while c<500:
+        a,b,c=b,a+b,c+1
+    d.append(b)
+        d = [chr(d[i]%26+96) if d[i]%26!=0 else 'z' for i in range(0,500,2) if
+        d[i]%26 in (1,5,9,15,21)]
+        print ''.join(d)
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/pratyai.jpeg')"></div></td>
+                                <td>Pratyai</td>
+                                <td>C++</td>
+                                <td class="no">No</td>
+                                <td>Bangladesh University of Engineering and Technology</td>
+                                <td>Electrical and Electronics Engineering</td>
+                                <td>1</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+int main()
+{
+    for (int i=0,j=0,k=1,l,c=(j?('a'+j):'z'),d=(c=='a'?c:(c=='e'?c:(c=='i'?c:(c=='o'?c:(c=='u'?c:0))))); i<500; ++i,l=(k+j)%26,j=k,k=l,c=(j?('a'+j):'z'),d=(c=='a'?c:(c=='e'?c:(c=='i'?c:(c=='o'?c:(c=='u'?c:0)))))) putchar(d), putchar(i==499?'\n':'\0');
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/manpreet.jpg')"></div></td>
+                                <td>Manpreet</td>
+                                <td>C</td>
+                                <td class="no">No</td>
+                                <td>Birla Institute of Technology and Science Pilani , India</td>
+                                <td>Information Systems</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+#include<stdio.h>
+#define d ||z[i]%26+96==
+int main()
+{
+    int z[250]={1,2},i=2,c=0;
+    char s[251]={};
+    while(i<250)z[i++]=3*z[i-1]-z[i-2];
+    for(i=0;i<250;i++)if(0 d'a'd'e'd'i'd'o'd'u')s[c++]=z[i]%26+96;
+    puts(s);
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/nathan.jpg')"></div></td>
+                                <td>Nathan</td>
+                                <td>PHP</td>
+                                <td class="yes">Yes</td>
+                                <td>BYU, Utah</td>
+                                <td>MISM</td>
+                                <td>4</td>
+                                <td>149</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+function a($b = true, $c = 0, $d = 0, $e = 1) {
+	return ($c < 500 ? (($b && in_array($f = chr($d + 96), ['a','e','i','o','u'])? $f : "") . (a(!$b, $c + 1, $e, ($d + $e) % 26))) : "");
+}
+echo a();
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/silhouette.jpeg')"></div></td>
+                                <td>Desh</td>
+                                <td>Java</td>
+                                <td class="no">No</td>
+                                <td>Heinz College, CMU , Pittsburgh</td>
+                                <td>Masters in Information Systems</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:550px;">
+/* This code is submitted by DESH DEEPAK GAHLOT. My mail id is deshmnnit04@gmail.com*/
+
+import java.math.*;
+
+public class Puzzle {
+
+		public static void main(String[] args) {
+		BigInteger[] array = new BigInteger[500];  //BigInter to store the finbonnaci series
+		array[0] = new BigInteger("0");
+		array[1] = new BigInteger("1");
+		
+		for(int i=2;i<500;i++){
+        array[i] = array[i-1].add(array[i-2]);	  //Generating fibonnaci series and storing in array[]
+		  }
+		
+		BigInteger[] array1 = new BigInteger[250]; 
+		
+		 int size = 0 ;
+		 for(int i = 0 ; i < 500 ; i++){
+			 
+			 if(i%2 == 0){          //removing numbers at alternate position and storing in an new array named as array1
+				 
+				 array1[size] = array[i];
+				 //System.out.println(array1[size]);
+				 size++;
+				 
+			 }
+			
+		 }
+		
+		 char[] c = new char[250];
+ 	 
+		 String st = "" ;
+		 
+		 BigInteger b = new BigInteger("26");
+		 
+		 for(int i=1;i<250;i++)
+		 {
+		int	s = (array1[i].mod(b)).intValue() ;           //Taking mod with 26 for every number in array1 and then storing a matching
+			  	                                          //character in a character string
+		if(s == 0)
+	    {
+	    	c[i] = 'z';
+	    }
+		
+		else
+		{
+	    s = s + 96 ;
+	    c[i] = (char)s;
+		}
+		 
+	
+		if(c[i] != 'a' && c[i] != 'i' && c[i] != 'e' && c[i] != 'o' && c[i] != 'u'){   //removing vowels 
+			
+			st = st + Character.toString(c[i]) ;
+			
+		}
+            }
+            System.out.println(st);    //Printing the string
+	}
+
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/max.jpg')"></div></td>
+                                <td>Max</td>
+                                <td>C</td>
+                                <td class="yes">Yes</td>
+                                <td>University of Toronto</td>
+                                <td>Computer Science and Mathematics</td>
+                                <td>15</td>
+                                <td>274</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:200px;">
+#include <stdio.h>
+int main(void) {
+  int v[2] = {0,1};
+  char res[250], t[2];
+  char lookup[26] = "\0a\0\0\0e\0\0\0i\0\0\0\0\0o\0\0\0\0\0u\0\0\0\0";
+  int i = 0;
+  int c = 0;
+  while (c++ < 250) {
+    res[i] = lookup[v[0]];
+    i = (res[i] != '\0') ? i + 1 : i;
+    t[0] = (v[0] + v[1]) % 26;
+    t[1] = (v[0] + v[1] + v[1]) % 26;
+    v[0] = t[0];
+    v[1] = t[1];
+  }
+  res[i] = '\0';
+  printf("%s\n", res);
+  return 0;
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/puneet.jpeg')"></div></td>
+                                <td>Puneet</td>
+                                <td>C</td>
+                                <td class="yes">Yes</td>
+                                <td>Carnegie Mellon University</td>
+                                <td>Master of Information Systems Management</td>
+                                <td>15</td>
+                                <td>251</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:200px;">
+#include<stdio.h>
+
+void main()
+{
+int i, j=0;
+int f[500];
+char c[250], g[250];
+f[0] = 0;
+f[1] = 1;
+c[0] = 122;
+for (i=2; i<500; i++) {
+  f[i] = f[i-1]%26 + f[i-2]%26;
+  if(i%2==0) {
+    c[i/2] = (f[i]-1)%26 + 97;
+    if(c[i/2] == 'a' || c[i/2] == 'e' || c[i/2] == 'i' || c[i/2] == 'o' || c[i/2] == 'u') {
+      g[j] = c[i/2];
+      j++;
+    }
+  }
+}
+g[j] = '\0';
+printf("%s\n", g);
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/prathamesh.jpg')"></div></td>
+                                <td>Prathamesh</td>
+                                <td>C</td>
+                                <td class="yes">Yes</td>
+                                <td>Pune Institute of Computer Technology, Pune (India)</td>
+                                <td>N/A</td>
+                                <td>16</td>
+                                <td>226</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:200px;">
+#include <stdio.h>
+
+int main()
+{
+	int i = 0, j = 1, l, sum, temp;
+	for (l = 0; l < 498; l++)
+	{
+		sum = i + j;
+		if (sum > 25)
+			sum = sum % 26;
+		i = j;
+		j = sum;
+		
+		if (l % 2 == 0)
+		{		
+			if (sum != 0)
+				temp = sum + 96;			
+			else
+				temp = sum + 112;
+			if ( ((temp == 97) || (temp == 101) || (temp == 105) || (temp == 111) || (temp == 117)) )
+				printf("%c", temp);			
+		}
+	}
+	return 0;
+}
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="image" style="background-image:url('images/alessandro.jpg')"></div></td>
+                                <td>Alessandro</td>
+                                <td>Python</td>
+                                <td class="yes">Yes</td>
+                                <td>Université de Montréal</td>
+                                <td>Computer Science</td>
+                                <td>9</td>
+                                <td>142</td>
+                                <td>1.328</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <div class="code">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:200px;">
+def f():
+    a,b,i=0,1,0
+    while i<500:
+        yield a
+    	a,b,i=b,a+b,i+1
+if __name__ == "__main__":
+    a = [chr(x%26+96) for x in f()][::2]
+    w = ''.join([x for x in a if x in 'aeiou'])
+    print w
+</pre>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="subscribe pane">
+                    <h1>Subscribe</h1>
+                    <p> Wanted to compete this time but couldn't get around to it? Subscribe to our newsletter and we'll let you know the next time we have an event. As we grow in popularity, the prizes will increase. We are already in the talks with the likes of Microsoft and other technology companies to sponsor us. Don't miss a beat and subscribe today!
+                        <!-- Begin MailChimp Signup Form -->
+                        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                                #mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                        <form action="http://hacker-olympics.us5.list-manage.com/subscribe/post?u=c69637e432f0c34afaf7eca0e&amp;id=6bc679d322" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                </div>
+                <div class="final">
+                    <font class="begin">May the games never end.</font><br />
+                </div>
+            </div>  
+        </div>
+    </body>
+</html>

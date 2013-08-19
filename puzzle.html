@@ -1,0 +1,182 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacker Olympics</title>
+        <meta name="Description" content="Enter to win prizes in this years Hacker Olympics. Simply solve the puzzle in your preferred language and email your submission today!">
+        <meta name="Keywords" content="hackers, olympics, coding, hackathon, python, coding puzzles, puzzle, contest">
+        <meta name="Author" content="Seth Howard">
+        <meta name="CATEGORY" content="home page">
+        <meta name="robots" content="index, follow">
+        <meta name="Reply-to" content="saulpower1@gmail.com">
+        <meta name="Content-Type" content="text/html; charset=iso8859-1">
+        <meta name="resource-type" content="document">
+        <meta name="Copyright" content="2011 Copyright">
+        <meta name="rights" content="Copyright 2012. All material contained herein is owned and protected. Any attempts to reproduce this information without the express written consent from the owner will be prosecuted.">
+        <meta name="googlebot" content="index, follow">
+        <meta name="msnbot" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style/style.css" rel="stylesheet">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33486923-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="footer">
+                <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+                <div class="fb-like" data-href="http://www.hacker-olympics.com" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                </script>
+            </div>
+            <div class="content">
+                <div class="navigation">
+                    <span><a href="/">Home</a></span>
+                    <span class="active_link">Puzzle</span>
+                    <span><a href="solution.html">Solution</a></span>
+                    <span><a href="results.html">Results</a></span>
+                </div>
+                <div class="about pane">
+                    <div class="header">
+                        The Hacker Olympics - Summer 2012 Puzzle
+                    </div>
+                    <div class="center">
+                        <img src="images/olympics.jpeg">
+                    </div>
+                </div>
+                <div class="puzzle pane">
+                    <h1>The Puzzle</h1>
+                    <p>Leonardo Fibonacci was born around 1170, the exact date is still a mystery. However, what he is probably known best for is his numbers, or the <i>Fibonacci Sequence</i>. The sequence works like this. Starting with 0 and 1, add the previous two numbers together to generate the next number in the sequence. So, the pattern looks similar to what’s below.<br /><br />
+                    0, 1, 1, 2, 3, 5, 8, 13, 21, 34...<br /><br />
+                    Your job, is to do the following.<br />
+                    <ol>
+                        <li>
+                            Continue this sequence until the 500th number.
+                        </li>
+                        <li>
+                            Strip out every other number from the completed sequence. So, assuming [0] is the index,  take out [1], [3], [5], [7] etc.
+                        </li>
+                        <li>
+                            Convert the remaining numbers into alphabet characters. Each character has a number associated with it, a = 1, b = 2, c = 3 etc. If the number is greater than 26, then divide it by 26 and use the remainder as your alphabet character. If the number or remainder is 0, then this translates to the 26th character, since 26 divided by 26 would have a remainder of 0. For another example, if the number is 30, then divide by 26, leaving a remainder of 4. The proper character is ‘d’.
+                        </li>
+                        <li>
+                            Lastly, remove all consonants and concatenate into one string (Note: 'Y' is considered a consonant).
+                        </li>
+                        <li>
+                            Your code must include a line printing the result to the console.
+                        </li>
+                        <li>
+                            Send the final string and source code to me (See submission section below).
+                        </li>
+                    </ol>
+                </div>
+                <div class="rules pane">
+                    <h1>Rules</h1>
+                    <ol>
+                        <li>
+                            You must use one of the following programming languages:<br />
+                            <ul>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>C#</li>
+                                <li>Objective-C</li>
+                                <li>C++</li>
+                                <li>C</li>
+                                <li>PHP</li>
+                            </ul>
+                        </li>
+                        <li>Ternary code is acceptable</li>
+                        <li>Code <b>CANNOT</b> be compacted into one line. Wherever a line break is needed, one must be issued<br /><br />Examples
+                            <div class="example code">
+                                //This code is not considered one line<br />
+                                if(variable + 4 > 10){ variable += 10 } else { variable -= 10 }; variable = variable + 5;<br /><br />
+
+                                //The above code would be translated to this<br />
+                                If(variable + 4 > 10){
+                                <div class="left">variable += 10;</div>
+                                } else {<br />
+                                <div class="left">variable -= 10</div>
+                                };<br />
+                                variable = variable + 5;
+                            </div>
+                        </li>
+                        <li>Code is due by 5:00 PM EST Friday July 20th.</li>
+                    </ol>
+                </div>
+                <div class="prizes pane">
+                    <h1>Prizes</h1>
+                    <p>There are two top prizes and several Honorable Mentions. Your code will be judged by the following criteria. Top prize is $25.00 mailed directly to your door.</p>
+                    <ul>
+                        <li>
+                            Top Prize: Whomever can complete the puzzle correctly in the fewest number of lines
+                        </li>
+                        <li>
+                            Top Prize: Whomever can complete the puzzle correctly in the fewest number of characters
+                        </li>
+                        <li>
+                            Top Prize: Whomever's code has the fastest clock speed.
+                        </li>
+                        <li>
+                            Honorable Mentions: Those who complete the puzzle correctly with the fewest lines and characters for each language (Assuming they didn't win overall)
+                        </li>
+                        <li>
+                            Honorable Mention: Anyone who completes the puzzle correctly using only SQL and a database.
+                        </li>
+                    </ul>
+                </div>
+                <div class="subscribe pane">
+                    <h1>Subscribe</h1>
+                    <p> Not feeling up to competing? Subscribe to our newsletter and we'll let you know the next time we have an event. As we grow in popularity, the prizes will increase. We are already in the talks with the likes of Microsoft and other technology companies to sponsor us. Don't miss a beat and subscribe today!
+                        <!-- Begin MailChimp Signup Form -->
+                        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                        <form action="http://hacker-olympics.us5.list-manage.com/subscribe/post?u=c69637e432f0c34afaf7eca0e&amp;id=6bc679d322" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                </div>
+            </div>  
+        </div>
+    </body>
+</html>

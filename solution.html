@@ -1,0 +1,154 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacker Olympics - Solution</title>
+        <meta name="Description" content="Enter to win prizes in this years Hacker Olympics. Simply solve the puzzle in your preferred language and email your submission today!">
+        <meta name="Keywords" content="hackers, olympics, coding, hackathon, python, coding puzzles, puzzle, contest">
+        <meta name="Author" content="Seth Howard">
+        <meta name="CATEGORY" content="home page">
+        <meta name="robots" content="index, follow">
+        <meta name="Reply-to" content="saulpower1@gmail.com">
+        <meta name="Content-Type" content="text/html; charset=iso8859-1">
+        <meta name="resource-type" content="document">
+        <meta name="Copyright" content="2011 Copyright">
+        <meta name="rights" content="Copyright 2012. All material contained herein is owned and protected. Any attempts to reproduce this information without the express written consent from the owner will be prosecuted.">
+        <meta name="googlebot" content="index, follow">
+        <meta name="msnbot" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style/style.css" rel="stylesheet">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script src="js/bigInt.js" ></script>
+        <script src="js/numberScheme.js" ></script>
+        <script src="js/codeview.js" ></script>
+        <script src="js/solution.js" ></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33486923-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </head>
+    <body id="solutions">
+        <div class="main">
+            <div class="footer">
+                <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+                <div class="fb-like" data-href="http://www.hacker-olympics.com" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                </script>
+            </div>
+            <div class="content">
+                <div class="navigation">
+                    <span><a href="/">Home</a></span>
+                    <span><a href="puzzle.html">Puzzle</a></span>
+                    <span class="active_link">Solution</span>
+                    <span><a href="results.html">Results</a></span>
+                </div>
+                <div class="about pane">
+                    <div class="header">
+                        The Hacker Olympics - Solution
+                    </div>
+                    <div class="center">
+                        <img src="images/olympics.jpeg">
+                    </div>
+                    <div class="solution">
+                        "aueeuaeauuaeaueeuaeauuaeaueeuaeauuaeaueeuaeauuaeaueeuaeauuaeaueeuaeauuae"<br /><br />
+                        <ul>
+                            <li>String Length: 72 characters</li>
+                            <li>Repeating Pattern: aueeuaeauuae</li>
+                            <li>Times Repeated: 6</li>
+                        </ul>
+                    </div>
+                    <p>This problem faced a few challenges, but depending on what language you used, some may or may not have needed to be overcome.<br /><br />
+                    When the Fibonacci sequence got to a higher number, it exceeded the capacity of many languages to execute simple math with precision. For example, in JavaScript, the max value with precision is just over 9000000000000000. The 78th Fibonacci term is just under it at 8944394323791463, while the 79th exceeds it at 14472334024676218. Essentially, when trying to modulo numbers larger then JavaScripts max, there were errors which threw off the entire code. This however can be resolved by adding a BigInt library, of which many languages already come with. If you chose Python, you didn't even have to worry because the language is precise enough as it is.<br /><br />
+                    For everyone who is curious, below is a well documented and easy to follow script that explains sequentially how each process was executed. Many, if not all, of the entrants combined these steps together or forwent steps that they deemed unneccessary. As long as the output was correct, and computed via a computer, then their answers were also correct.
+                    </p>
+                </div>
+                <div class="codeCenter">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:700px;">
+var a = BigInteger(0);
+var b = BigInteger(1);
+var fib = [a,b];
+var stripped = [];
+var alphabetized = [];
+var answer = [];
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var vowels = ['a','e','i','o','u'];
+
+//Continue the fibonacci sequence out to the 500th term
+for(var i = 1;i < 499; i++){
+    var newFib = fib[i].add(fib[i-1]);
+    fib.push(newFib);
+};
+
+//Strip out all of the odd indexes and place into a new array
+for(var i = 0; i < fib.length; i++){
+    if(i % 2 == 0){
+        stripped.push(fib[i]);
+    }
+}
+
+//Find the modulo of each number in the array, and match it with the corresponding letter in the alphabet array
+for(var i = 0; i < stripped.length; i++){
+    var modulo = stripped[i].remainder(26);
+    if(modulo == 0){
+        modulo = 26;
+    }
+    alphabetized[i] = alphabet[modulo - 1];
+}
+
+//Compare each letter in the array to see if it is in the vowel array, pull out anything that doesn't match
+for(var i = 0; i < alphabetized.length; i++){
+    if(vowels.indexOf(alphabetized[i]) != -1){
+        answer.push(alphabetized[i]);
+    }
+}
+
+//Concatenate the answer array with an empty string separator and log to the console
+console.log(answer.join(''));
+</pre>
+                </div>
+                <p><br /><br />
+                However, believe it or not, by more fully understanding the entire process and what the actual desired output is, the above code of 31 lines and 653 spaces can be reduced to only 6 lines and 256 characters, and probably even further. I was however at the mercy of method names and the BigInt library.
+                <br /><br /></p>
+                <div class="codeCenter">
+<pre class="codeview javascript lineNumbers" style="width:800px; height:150px;">
+var a = BigInteger(0),b = BigInteger(1),f = [a,b],x = [],v = [1,'a',5,'e',9,'i',15,'o',21,'u'];
+for(var i = 1;i < 499; i++){
+    if(i % 2 == 0)
+        v.indexOf(f[i].remainder(26)._d[0]) != -1 && x.push(v[v.indexOf(f[i].remainder(26)._d[0]) + 1])
+    f.push(f[i].add(f[i-1]));
+};
+console.log(x.join(''));
+</pre>
+                    <br/><br/>
+                    <p>Questions? Comments? <a href="mailto:seth.howard@mokinetworks.com">seth.howard@mokinetworks.com</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
